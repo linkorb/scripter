@@ -1,0 +1,27 @@
+{
+    "name": "linkorb/scripter",
+    "description": "Scripter: makes your apps scriptable",
+    "homepage": "http://www.github.com/linkorb/scripter",
+    "keywords": ["php", "scripter", "linkorb"],
+    "type": "library",
+    "authors": [
+        {
+            "name": "LinkORB Engineering",
+            "email": "engineering@linkorb.com",
+            "role": "Development"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0",
+        "docopt/docopt": "^1.0",
+        "symfony/console": "^4.0",
+        "symfony/process": "^3.0|^4.0",
+        "symfony/dotenv": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Scripter\\": "src/"
+        }
+    },
+    "license": "MIT"
+}
