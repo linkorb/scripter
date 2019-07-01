@@ -86,10 +86,12 @@ class RunScriptCommand extends Command
         $fix = $pattern->fix();
 
         $argsArray = [];
-        if (!empty($args = $fix->children[0]->children[0]->children)) {
-            foreach ($args as $arg) {
-                if ($arg instanceof Docopt\Argument) {
-                    $argsArray[] = str_replace(['>', '<'], '', $arg->name);
+        if (isset($fix->children[0]->children[0]->children)) {
+            if (!empty($args = $fix->children[0]->children[0]->children)) {
+                foreach ($args as $arg) {
+                    if ($arg instanceof Docopt\Argument) {
+                        $argsArray[] = str_replace(['>', '<'], '', $arg->name);
+                    }
                 }
             }
         }
